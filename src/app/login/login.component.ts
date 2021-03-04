@@ -26,7 +26,7 @@ export class LoginComponent implements OnInit {
         }
     }
 
-    ngOnInit() {
+    public ngOnInit() {
         this.loginForm = this.formBuilder.group({
             email: ['', Validators.required],
             password: ['', Validators.required]
@@ -39,7 +39,7 @@ export class LoginComponent implements OnInit {
     // convenience getter for easy access to form fields
     get f() { return this.loginForm.controls; }
 
-    onSubmit() {
+    public onSubmit() {
         this.submitted = true;
 
         // reset alerts on submit

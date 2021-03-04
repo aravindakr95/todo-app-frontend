@@ -11,6 +11,8 @@ import { RegisterComponent } from './register';
 import { LoginComponent } from './login';
 import { AlertComponent } from './alert';
 
+import { ErrorInterceptor, JwtInterceptor } from '@/helpers';
+
 @NgModule({
     imports: [
         BrowserModule,
@@ -24,7 +26,10 @@ import { AlertComponent } from './alert';
         LoginComponent,
         AlertComponent
     ],
-    providers: [],
+    providers: [
+        { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
+        { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
+    ],
     bootstrap: [AppComponent]
 })
 export class AppModule { }

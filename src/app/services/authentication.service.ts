@@ -7,7 +7,7 @@ import { User } from '@/models';
 
 @Injectable({ providedIn: 'root' })
 export class AuthenticationService {
-    private url = 'http://localhost:3000/v1/api';
+    private url = 'http://localhost:3000/v1/api/auth';
 
     private currentUserSubject: BehaviorSubject<User>;
     public currentUser: Observable<User>;
@@ -21,18 +21,18 @@ export class AuthenticationService {
         return this.currentUserSubject.value;
     }
 
-    public loginUser(username, password): Observable<any> {
-        return this.http.post<any>(`${this.url}/users/authenticate`, { username, password })
-            .pipe(map(user => {
-                // store user details and jwt token in local storage to keep user logged in between page refreshes
-                localStorage.setItem('currentUser', JSON.stringify(user));
-                this.currentUserSubject.next(user);
-                return user;
-            }));
+    public registerUser(user: User): Observable<any> {
+        return this.http.post(`${this.url}/register`, user);
     }
 
-    public registerUser(user: User): Observable<any> {
-        return this.http.post(`${config.apiUrl}/users/register`, user);
+    public loginUser(email, password): Observable<any> {
+        return this.http.post<any>(`${this.url}/login`, { email, password })
+            .pipe(map(response => {
+                // store user details and jwt token in local storage to keep user logged in between page refreshes
+                localStorage.setItem('currentUser', JSON.stringify(response.data));
+                this.currentUserSubject.next(response.data);
+                return response.data;
+            }));
     }
 
     public logoutUser() {

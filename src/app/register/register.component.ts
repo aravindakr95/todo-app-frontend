@@ -7,9 +7,9 @@ import { AlertService, AuthenticationService } from '@/services';
 
 @Component({ templateUrl: 'register.component.html' })
 export class RegisterComponent implements OnInit {
-    registerForm: FormGroup;
-    loading = false;
-    submitted = false;
+    public registerForm: FormGroup;
+    public loading = false;
+    public submitted = false;
 
     constructor(
         private formBuilder: FormBuilder,
@@ -23,18 +23,18 @@ export class RegisterComponent implements OnInit {
         }
     }
 
-    ngOnInit() {
+    public ngOnInit() {
         this.registerForm = this.formBuilder.group({
             fullName: ['', Validators.required],
-            username: ['', [Validators.required, Validators.email]],
-            password: ['', [Validators.required, Validators.minLength(6)]]
+            email: ['', [Validators.required, Validators.email]],
+            password: ['', [Validators.required, Validators.minLength(8)]]
         });
     }
 
     // convenience getter for easy access to form fields
-    get f() { return this.registerForm.controls; }
+    public get f() { return this.registerForm.controls; }
 
-    onSubmit() {
+    public onSubmit() {
         this.submitted = true;
 
         // reset alerts on submit
