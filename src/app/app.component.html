@@ -1,9 +1,9 @@
 ﻿<!-- nav -->
 <nav class="navbar navbar-expand navbar-dark bg-dark" *ngIf="currentUser">
     <div class="navbar-nav">
+        <a class="navbar-brand">Todo App</a>
         <a class="nav-item nav-link" routerLink="/">Home</a>
         <a class="nav-item nav-link" routerLink="/history">History</a>
-        <a class="nav-item nav-link" (click)="logoutUser()">Logout</a>
     </div>
 </nav>
 
@@ -22,9 +22,9 @@
 <!-- credits -->
 <div class="text-center">
     <p>
-        <a href="#" target="_top">Todo App - Ascentic Demo</a>
+        <button type="button" class="btn btn-outline-danger" (click)="logoutUser()">Logout</button>
     </p>
     <p>
-        <a href="#" target="_top">Aravinda Rathnayake</a>
+        <a href="#" target="_top">Todo App - Ascentic Demo</a>
     </p>
 </div>

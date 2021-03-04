@@ -1,4 +1,5 @@
 ﻿export interface User {
+    fullName: string;
     userId: string;
-    token: string;
+    authToken: string;
 }

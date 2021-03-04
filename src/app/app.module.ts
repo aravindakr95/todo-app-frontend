@@ -9,6 +9,7 @@ import { AppComponent } from './app.component';
 
 import { RegisterComponent } from './register';
 import { LoginComponent } from './login';
+import { HomeComponent } from './home';
 import { AlertComponent } from './alert';
 
 import { ErrorInterceptor, JwtInterceptor } from '@/helpers';
@@ -24,6 +25,7 @@ import { ErrorInterceptor, JwtInterceptor } from '@/helpers';
         AppComponent,
         RegisterComponent,
         LoginComponent,
+        HomeComponent,
         AlertComponent
     ],
     providers: [
