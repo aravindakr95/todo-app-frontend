@@ -8,6 +8,7 @@ import { appRoutingModule } from './app.routing';
 import { AppComponent } from './app.component';
 
 import { RegisterComponent } from './register';
+import { LoginComponent } from './login';
 import { AlertComponent } from './alert';
 
 @NgModule({
@@ -20,6 +21,7 @@ import { AlertComponent } from './alert';
     declarations: [
         AppComponent,
         RegisterComponent,
+        LoginComponent,
         AlertComponent
     ],
     providers: [],
