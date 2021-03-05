@@ -6,8 +6,7 @@ import { BsModalRef } from 'ngx-bootstrap/modal';
 
 import { Todo } from '@/models';
 
-import { TodoService } from '@/services/todo.service';
-import { AlertService } from '@/services';
+import { AlertService, TodoService } from '@/services';
 
 @Component({ templateUrl: 'todo-add.component.html' })
 export class TodoAddComponent implements OnInit, OnDestroy {

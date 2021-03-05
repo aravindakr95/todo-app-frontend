@@ -1,2 +1,2 @@
-﻿export * from './interceptors/error.interceptor';
-export * from './interceptors/jwt.interceptor';
+﻿export { AuthGuard } from './guards'
+export { JwtInterceptor, ErrorInterceptor } from './interceptors';

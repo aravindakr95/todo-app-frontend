@@ -1,2 +1,2 @@
-﻿export * from './user.model';
-export * from './todo.model';
+﻿export { User } from './user.model';
+export { Todo } from './todo.model';

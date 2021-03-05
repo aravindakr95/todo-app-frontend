@@ -12,9 +12,9 @@ import { TodoService } from '@/services/todo.service';
 
 import { TodoStatus } from '@/enums';
 
-import { TodoAddComponent } from '@/todo-add';
-import { TodoEditComponent } from '@/todo-edit';
-import { TodoDeleteComponent } from '@/todo-delete';
+import { TodoAddComponent } from '@/components/todo-add';
+import { TodoEditComponent } from '@/components/todo-edit';
+import { TodoDeleteComponent } from '@/components/todo-delete';
 
 @Component({ templateUrl: 'home.component.html' })
 export class HomeComponent implements OnInit, OnDestroy {

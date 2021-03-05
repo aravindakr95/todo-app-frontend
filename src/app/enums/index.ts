@@ -1,2 +1,2 @@
-export * from './http-code.enum';
-export * from './todo-status.enum';
+export { HttpCode } from './http-code.enum';
+export { TodoStatus } from './todo-status.enum';
