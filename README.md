@@ -1,5 +1,51 @@
-# angular-8-registration-login-example
+## :copyright: todo-app-frontend
+> _Demonstration of Todo application with minimum UIs._
 
-Angular 8 User Registration and Login Example with Webpack 4
+## :book: Table of Contents
+   <!-- START doctoc generated TOC please keep comment here to allow auto update -->
+   <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
-Full tutorial with example available at https://jasonwatmore.com/post/2019/06/10/angular-8-user-registration-and-login-example-tutorial
+- [Usage](#usage)
+- [Getting started](#getting-started)
+- [Technologies](#technologies)
+- [How to use](#how-to-use)
+- [License](#license)
+
+   <!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
+## :sparkles: Usage
+
+Proceed with next steps if your platform meet following prerequisites.
+
+- Install [Node.js](https://nodejs.org/en/) (14+ LTS) on your device.
+
+## :sparkles: Getting Started
+* Run the following commands under `todo-app-backend` directory to install dependencies.
+ ```
+ npm install
+ ```
+
+## :sparkles: Technologies
+
+Usage          	            | Technology
+ --------------------------	| --------------------------
+Language        | JavaScript
+Framework     	| Express
+Database | MongoDB
+Authentication | JWT
+Transpiler           	| Babel
+Documentation        	| Swagger
+Code Quality Tools         	| ES Lint
+Dependency Registries      	| NPM
+
+## :sparkles: How to Use
+
+Here is the list of tasks available out of the box and run these via `npm run <task>`
+ ```
+   build             Perform webpack build and generates bundle
+   start             Run the build task and mount index file
+ ```
+
+## :sparkles: License
+
+Todo API Backend is MIT licensed. Please refer LICENSE for more information.
