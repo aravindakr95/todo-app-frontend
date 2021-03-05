@@ -4,6 +4,7 @@ import { first } from 'rxjs/operators';
 import { BsModalRef } from 'ngx-bootstrap/modal';
 
 import { TodoService } from '@/services/todo.service';
+import { AlertService } from '@/services';
 
 @Component({ templateUrl: 'todo-delete.component.html' })
 export class TodoDeleteComponent implements OnDestroy {
@@ -14,13 +15,17 @@ export class TodoDeleteComponent implements OnDestroy {
 
     public saveClick = new Subject();
 
-    constructor(public modalRef: BsModalRef, private todoService: TodoService) {}
+    constructor(public modalRef: BsModalRef,
+                private todoService: TodoService,
+                private alertService: AlertService
+    ) {}
 
     public onSubmit() {
         this.subscription = this.todoService.deleteTodoById(this.todoId)
             .pipe(first())
             .subscribe(() => {
                 this.modalRef.hide();
+                this.alertService.success('Todo deleted successful', false);
                 this.saveClick.next();
             });
     }

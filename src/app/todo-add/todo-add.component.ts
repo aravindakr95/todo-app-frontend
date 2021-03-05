@@ -50,7 +50,7 @@ export class TodoAddComponent implements OnInit, OnDestroy {
             .pipe(first())
             .subscribe(() => {
                     this.modalRef.hide();
-                    this.alertService.success('Todo added successful', true);
+                    this.alertService.success('Todo added successful', false);
                     this.saveClick.next();
                 },
                 error => {

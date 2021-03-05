@@ -3,11 +3,14 @@
 import { RegisterComponent } from './register';
 import { LoginComponent } from '@/login';
 import { HomeComponent } from '@/home';
+import { HistoryComponent } from '@/history';
 
 import { AuthGuard } from '@/helpers/guards/auth.guard';
 
+
 const routes: Routes = [
     { path: '', component: HomeComponent, canActivate: [AuthGuard] },
+    { path: 'history', component: HistoryComponent, canActivate: [AuthGuard] },
     { path: 'register', component: RegisterComponent },
     { path: 'login', component: LoginComponent },
 

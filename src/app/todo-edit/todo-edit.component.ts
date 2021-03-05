@@ -41,7 +41,7 @@ export class TodoEditComponent implements OnDestroy {
             .pipe(first())
             .subscribe(() => {
                 this.modalRef.hide();
-                this.alertService.success(`Todo updated successful`, true);
+                this.alertService.success(`Todo updated successful`, false);
                 this.saveClick.next();
             });
     }

@@ -6,10 +6,10 @@
         </div>
         <ul class="nav navbar-nav mr-auto">
             <li>
-                <a class="nav-item nav-link" routerLink="/">Home</a>
+                <a class="nav-item nav-link" (click)="navigate('home')">Home</a>
             </li>
             <li>
-                <a class="nav-item nav-link" routerLink="/history">History</a>
+                <a class="nav-item nav-link selected" (click)="navigate('history')">History</a>
             </li>
         </ul>
         <ul class="nav navbar-nav ml-auto">

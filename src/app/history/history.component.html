@@ -1,0 +1,35 @@
+<ng-data-table
+        [id]="'todo_list'"
+        [title]="'Todo List'"
+        [selectTrackBy]="'_id'"
+        [showHeader]="true"
+        [limit]="5"
+        [pageable]="true"
+        [items]="todosList"
+        (init)="onDataTableInit($event)">
+    <ng-data-table-column
+            [title]="'Status'"
+            [width]="30">
+        <ng-template #ngDataTableCell let-row="row">
+            <td (click)="$event.stopPropagation()">
+                <div class="form-check">
+                    <p>{{row.item.status}}</p>
+                </div>
+            </td>
+        </ng-template>
+    </ng-data-table-column>
+    <ng-data-table-column
+            [field]="'title'"
+            [title]="'Title'"
+            [width]="50">
+    </ng-data-table-column>
+    <ng-data-table-column
+            [field]="'description'"
+            [title]="'Description'"
+            [width]="50">
+    </ng-data-table-column>
+    <ng-template #ngDataTableNoRecords>
+        <h1 style="font-family: 'Helvetica Neue'; color: #8f893f;">No todos have been detected.</h1>
+    </ng-template>
+</ng-data-table>
+

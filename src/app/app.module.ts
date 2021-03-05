@@ -12,6 +12,7 @@ import { AppComponent } from './app.component';
 import { RegisterComponent } from './register';
 import { LoginComponent } from './login';
 import { HomeComponent } from './home';
+import { HistoryComponent } from '@/history';
 import { TodoAddComponent } from '@/todo-add';
 import { TodoEditComponent } from '@/todo-edit';
 import { TodoDeleteComponent } from '@/todo-delete';
@@ -33,6 +34,7 @@ import { ErrorInterceptor, JwtInterceptor } from '@/helpers';
         RegisterComponent,
         LoginComponent,
         HomeComponent,
+        HistoryComponent,
         AlertComponent,
         TodoAddComponent,
         TodoEditComponent,

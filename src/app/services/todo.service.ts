@@ -19,7 +19,12 @@ export class TodoService {
         return this.http.put(`${TodoService.todo_url}/${todo['_id']}`, todo);
     }
 
-    public getTodosByUserId(userId, status = TodoStatus.ACTIVE): Observable<any> {
+    public getTodosByUserId(userId, isHistory = false, status = TodoStatus.ACTIVE): Observable<any> {
+        if (isHistory) {
+            const params = { userId };
+            return this.http.get(`${TodoService.todo_url}`, { params });
+        }
+
         const params = { userId, status };
         return this.http.get(`${TodoService.todo_url}`, { params });
     }
