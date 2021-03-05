@@ -25,7 +25,7 @@ export class TodoEditComponent implements OnDestroy {
     ) {
     }
 
-    public setTodoFormData(todo: Todo) {
+    public setTodoFormData(todo: Todo): void {
         this.todoForm = this.formBuilder.group({
             _id: todo['_id'],
             title: todo.title,
@@ -36,7 +36,7 @@ export class TodoEditComponent implements OnDestroy {
         this.todo = todo;
     }
 
-    public onSubmit() {
+    public onSubmit(): void {
         this.subscription = this.todoService.updateTodo(this.todoForm.value)
             .pipe(first())
             .subscribe(() => {

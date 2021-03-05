@@ -26,7 +26,7 @@ export class LoginComponent implements OnInit {
         }
     }
 
-    public ngOnInit() {
+    public ngOnInit(): void {
         this.loginForm = this.formBuilder.group({
             email: ['', Validators.required],
             password: ['', Validators.required]
@@ -45,7 +45,7 @@ export class LoginComponent implements OnInit {
         this.router.navigate([route]);
     }
 
-    public onSubmit() {
+    public onSubmit(): void {
         this.submitted = true;
 
         // reset alerts on submit

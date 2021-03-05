@@ -30,14 +30,14 @@ export class TodoAddComponent implements OnInit, OnDestroy {
         return this.todoForm.controls;
     }
 
-    public ngOnInit() {
+    public ngOnInit(): void {
         this.todoForm = this.formBuilder.group({
             title: ['', Validators.required],
             description: ['', Validators.required]
         });
     }
 
-    public onSubmit() {
+    public onSubmit(): void {
         this.submitted = true;
         // stop here if form is invalid
         if (this.todoForm.invalid) {

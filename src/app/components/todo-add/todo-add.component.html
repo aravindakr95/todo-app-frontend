@@ -26,10 +26,10 @@
         </form>
     </div>
     <div class="modal-footer">
-        <a class="btn btn-link btn-sm" (click)="onCancelClick()">Cancel</a>
         <button type="button" class="btn btn-success btn-sm" (click)="onSubmit()" [disabled]="todoForm.invalid">
             <i class="fa fa-save"></i> Add
         </button>
+        <a class="btn btn-link btn-sm" (click)="onCancelClick()">Cancel</a>
     </div>
 </div>
 

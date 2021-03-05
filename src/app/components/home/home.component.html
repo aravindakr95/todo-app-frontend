@@ -37,7 +37,7 @@
             [title]="'Description'"
             [width]="50">
     </ng-data-table-column>
-    <ng-data-table-column [title]="'Action'" [width]="25">
+    <ng-data-table-column [title]="'Action'" [width]="20">
         <ng-template #ngDataTableCell let-row="row">
             <td (click)="$event.stopPropagation()">
                 <button type="button" class="btn btn-primary btn-sm" (click)="openEditModal(row.item)">

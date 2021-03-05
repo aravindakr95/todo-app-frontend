@@ -20,7 +20,7 @@ export class TodoDeleteComponent implements OnDestroy {
                 private alertService: AlertService
     ) {}
 
-    public onSubmit() {
+    public onSubmit(): void {
         this.subscription = this.todoService.deleteTodoById(this.todoId)
             .pipe(first())
             .subscribe(() => {

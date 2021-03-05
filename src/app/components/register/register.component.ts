@@ -23,7 +23,7 @@ export class RegisterComponent implements OnInit {
         }
     }
 
-    public ngOnInit() {
+    public ngOnInit(): void {
         this.registerForm = this.formBuilder.group({
             fullName: ['', Validators.required],
             email: ['', [Validators.required, Validators.email]],
@@ -34,7 +34,7 @@ export class RegisterComponent implements OnInit {
     // convenience getter for easy access to form fields
     public get f() { return this.registerForm.controls; }
 
-    public onSubmit() {
+    public onSubmit(): void {
         this.submitted = true;
 
         // reset alerts on submit
