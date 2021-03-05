@@ -10,6 +10,7 @@ module.exports = {
             '@': path.resolve(__dirname, 'src/app/'),
         }
     },
+    devtool: 'source-map',
     module: {
         rules: [
             {

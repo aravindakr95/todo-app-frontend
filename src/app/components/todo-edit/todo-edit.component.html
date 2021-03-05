@@ -9,16 +9,18 @@
         <form [formGroup]="todoForm" (ngSubmit)="onSubmit()">
             <div class="form-group">
                 <label for="title">Title</label>
-                <input type="text" formControlName="title" class="form-control" [value]=todo.title>
+                <input type="text" formControlName="title" class="form-control form-control-sm" [value]=todo.title>
             </div>
             <div class="form-group">
                 <label for="description">Description</label>
-                <input type="text" formControlName="description" class="form-control" [value]="todo.description">
+                <input type="text" formControlName="description" class="form-control form-control-sm" [value]="todo.description">
             </div>
         </form>
     </div>
     <div class="modal-footer">
-        <button type="button" class="btn btn-default" (click)="onCancelClick()">Cancel</button>
-        <button type="button" class="btn btn-danger" (click)="onSubmit()" [disabled]="todoForm.pristine">Update</button>
+        <button type="button" class="btn btn-default btn-sm" (click)="onCancelClick()">Cancel</button>
+        <button type="button" class="btn btn-warning btn-sm" (click)="onSubmit()" [disabled]="todoForm.pristine"><span>
+            <i class="fa fa-edit"></i>
+        </span> Update</button>
     </div>
 </div>

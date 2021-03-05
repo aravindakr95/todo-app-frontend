@@ -8,8 +8,10 @@
     <div>Are you sure you want to delete <b>{{todoTitle}}</b>?</div>
 </div>
 <div class="modal-footer">
-    <button type="button" class="btn btn-default" (click)="onCancelClick()">No</button>
-    <button type="button" class="btn btn-danger" (click)="onSubmit()">Yes</button>
+    <button type="button" class="btn btn-default btn-sm" (click)="onCancelClick()">No</button>
+    <button type="button" class="btn btn-danger btn-sm" (click)="onSubmit()">
+        <span><i class="fa fa-trash"></i></span> Yes
+    </button>
 </div>
 
 

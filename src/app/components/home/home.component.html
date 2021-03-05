@@ -1,21 +1,25 @@
-<button type="button" class="btn btn-outline-primary btn-sm" (click)="openAddNewModal()">Add New</button>
+<button type="button" class="btn btn-outline-primary btn-sm" (click)="openAddNewModal()"><span>
+    <i class="fa fa-save"></i>
+</span> Add New</button>
 <br> &nbsp;
 <ng-data-table
         [id]="'todo_list'"
-        [title]="'Todo List'"
+        [title]="'Active Todo List'"
         [selectTrackBy]="'_id'"
         [showHeader]="true"
         [limit]="5"
         [pageable]="true"
         [items]="todosList"
-(init)="onDataTableInit($event)">
+        (init)="onDataTableInit($event)">
     <ng-data-table-column
             [title]="'Status'"
             [width]="30">
         <ng-template #ngDataTableCell let-row="row">
             <td (click)="$event.stopPropagation()">
                 <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" [checked]="isActiveTodo(row.item.status)" id="todoStatus" (click)="toggleStatus(row.item)">
+                    <input class="form-check-input" type="checkbox" value=""
+                           [checked]="isActiveTodo(row.item.status)" id="todoStatus"
+                           (click)="toggleStatus(row.item)">
                     <label class="form-check-label" for="todoStatus">
                         {{row.item.status}}
                     </label>
@@ -36,14 +40,18 @@
     <ng-data-table-column [title]="'Action'" [width]="45">
         <ng-template #ngDataTableCell let-row="row">
             <td (click)="$event.stopPropagation()">
-                <button type="button" class="btn btn-primary btn-sm" (click)="openEditModal(row.item)">Edit</button>
-                &nbsp;
-                <button type="button" class="btn btn-danger btn-sm" (click)="openDeleteModal(row.item['_id'], row.item.title)">Delete</button>
+                <button type="button" class="btn btn-primary btn-sm" (click)="openEditModal(row.item)">
+                    <i class="fa fa-edit"></i>
+                </button>&nbsp;
+                <button type="button" class="btn btn-danger btn-sm"
+                        (click)="openDeleteModal(row.item['_id'], row.item.title)">
+                    <i class="fa fa-trash"></i>
+                </button>
             </td>
         </ng-template>
     </ng-data-table-column>
     <ng-template #ngDataTableNoRecords>
-        <h1 style="font-family: 'Helvetica Neue'; color: #8f893f;">No todos have been detected.</h1>
+        <h1 style="font-family: 'Helvetica Neue'; color: #8f893f;">No todos has been detected.</h1>
     </ng-template>
 </ng-data-table>
 
