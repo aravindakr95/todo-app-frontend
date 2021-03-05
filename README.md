@@ -20,7 +20,7 @@ Proceed with next steps if your platform meet following prerequisites.
 - Install [Node.js](https://nodejs.org/en/) (14+ LTS) on your device.
 
 ## :sparkles: Getting Started
-* Run the following commands under `todo-app-backend` directory to install dependencies.
+* Run the following commands under `todo-app-frontend` directory to install dependencies.
  ```
  npm install
  ```
@@ -29,12 +29,11 @@ Proceed with next steps if your platform meet following prerequisites.
 
 Usage          	            | Technology
  --------------------------	| --------------------------
-Language        | JavaScript
-Framework     	| Express
-Database | MongoDB
+Language        | TypeScript
+Framework     	| Angular 8
+Stream Communication | RxJS
 Authentication | JWT
-Transpiler           	| Babel
-Documentation        	| Swagger
+Bundler           	| Webpack
 Code Quality Tools         	| ES Lint
 Dependency Registries      	| NPM
 
