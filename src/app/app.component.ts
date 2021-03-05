@@ -8,10 +8,10 @@ import './content/app.less';
 
 @Component({ selector: 'app-root', templateUrl: 'app.component.html' })
 export class AppComponent {
-    currentUser: User;
+    public currentUser: User;
 
     constructor(private router: Router, private authenticationService: AuthenticationService) {
-        this.authenticationService.currentUser.subscribe(x => this.currentUser = x);
+        this.authenticationService.currentUser.subscribe(data => this.currentUser = data);
     }
 
     public navigate(route) {
@@ -20,6 +20,6 @@ export class AppComponent {
 
     public logoutUser() {
         this.authenticationService.logoutUser();
-        this.navigate('login');
+        this.navigate('/login');
     }
 }

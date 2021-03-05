@@ -37,7 +37,7 @@
             [title]="'Description'"
             [width]="50">
     </ng-data-table-column>
-    <ng-data-table-column [title]="'Action'" [width]="45">
+    <ng-data-table-column [title]="'Action'" [width]="25">
         <ng-template #ngDataTableCell let-row="row">
             <td (click)="$event.stopPropagation()">
                 <button type="button" class="btn btn-primary btn-sm" (click)="openEditModal(row.item)">
@@ -51,7 +51,7 @@
         </ng-template>
     </ng-data-table-column>
     <ng-template #ngDataTableNoRecords>
-        <h1 style="font-family: 'Helvetica Neue'; color: #000000;">No todos has been detected</h1>
+        <h1 style="font-family: 'Helvetica Neue',sans-serif; color: #000000;">No todos has been detected</h1>
     </ng-template>
 </ng-data-table>
 

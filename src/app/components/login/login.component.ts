@@ -22,7 +22,7 @@ export class LoginComponent implements OnInit {
     ) {
         // redirect to home if already logged in
         if (this.authenticationService.currentUserValue) {
-            this.router.navigate(['/']);
+            this.navigate('/');
         }
     }
 
@@ -37,7 +37,13 @@ export class LoginComponent implements OnInit {
     }
 
     // convenience getter for easy access to form fields
-    get f() { return this.loginForm.controls; }
+    get f() {
+        return this.loginForm.controls;
+    }
+
+    public navigate(route) {
+        this.router.navigate([route]);
+    }
 
     public onSubmit() {
         this.submitted = true;
@@ -54,10 +60,10 @@ export class LoginComponent implements OnInit {
         this.authenticationService.loginUser(this.f.email.value, this.f.password.value)
             .pipe(first())
             .subscribe(() => {
-                    this.router.navigate([this.returnUrl]);
-                }, (error) => {
-                    this.alertService.error(error);
-                    this.loading = false;
-                });
+                this.navigate(this.returnUrl);
+            }, (error) => {
+                this.alertService.error(error);
+                this.loading = false;
+            });
     }
 }
