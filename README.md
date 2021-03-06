@@ -35,7 +35,7 @@ Proceed with next steps if your platform meet following prerequisites.
 Usage          	            | Technology
  --------------------------	| --------------------------
 Language        | TypeScript
-Framework     	| Angular 8
+Framework     	| Angular
 Stream Communication | RxJS
 Authentication | JWT
 Bundler           	| Webpack
@@ -52,4 +52,4 @@ Here is the list of tasks available out of the box and run these via `npm run <t
 
 ## :sparkles: License
 
-Todo API Backend is MIT licensed. Please refer LICENSE for more information.
+Todo API Frontend is MIT licensed. Please refer LICENSE for more information.
