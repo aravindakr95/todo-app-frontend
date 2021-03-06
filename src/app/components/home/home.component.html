@@ -37,15 +37,11 @@
             [title]="'Description'"
             [width]="50">
     </ng-data-table-column>
-    <ng-data-table-column [title]="'Action'" [width]="20">
+    <ng-data-table-column [title]="'Action'" [width]="14">
         <ng-template #ngDataTableCell let-row="row">
             <td (click)="$event.stopPropagation()">
                 <button type="button" class="btn btn-primary btn-sm" (click)="openEditModal(row.item)">
                     <i class="fa fa-edit"></i>
-                </button>&nbsp;
-                <button type="button" class="btn btn-danger btn-sm"
-                        (click)="openDeleteModal(row.item['_id'], row.item.title)">
-                    <i class="fa fa-trash"></i>
                 </button>
             </td>
         </ng-template>

@@ -12,9 +12,7 @@
             [width]="30">
         <ng-template #ngDataTableCell let-row="row">
             <td (click)="$event.stopPropagation()">
-                <div class="form-check">
-                    <p>{{row.item.status}}</p>
-                </div>
+                <p>{{row.item.status}}</p>
             </td>
         </ng-template>
     </ng-data-table-column>
@@ -27,6 +25,16 @@
             [field]="'description'"
             [title]="'Description'"
             [width]="50">
+    </ng-data-table-column>
+    <ng-data-table-column [title]="'Action'" [width]="14">
+        <ng-template #ngDataTableCell let-row="row">
+            <td (click)="$event.stopPropagation()">
+                <button type="button" class="btn btn-danger btn-sm"
+                        (click)="openDeleteModal(row.item['_id'], row.item.title)">
+                    <i class="fa fa-trash"></i>
+                </button>
+            </td>
+        </ng-template>
     </ng-data-table-column>
     <ng-template #ngDataTableNoRecords>
         <h1 style="font-family: 'Helvetica Neue'; color: #000000;">No todos have been detected</h1>

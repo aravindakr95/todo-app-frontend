@@ -14,7 +14,6 @@ import { TodoStatus } from '@/enums';
 
 import { TodoAddComponent } from '@/components/todo-add';
 import { TodoEditComponent } from '@/components/todo-edit';
-import { TodoDeleteComponent } from '@/components/todo-delete';
 
 @Component({ templateUrl: 'home.component.html' })
 export class HomeComponent implements OnInit, OnDestroy {
@@ -67,15 +66,6 @@ export class HomeComponent implements OnInit, OnDestroy {
     public openEditModal(todo: Todo): void {
         const modalRef: BsModalRef = this.modalService.show(TodoEditComponent, { ignoreBackdropClick: true });
         modalRef.content.setTodoFormData(todo);
-        modalRef.content.saveClick.subscribe(() => {
-            this.refreshTodosList();
-        });
-    }
-
-    public openDeleteModal(todoId: string, todoTitle: string) {
-        const modalRef: BsModalRef = this.modalService.show(TodoDeleteComponent, { ignoreBackdropClick: true });
-        modalRef.content.todoId = todoId;
-        modalRef.content.todoTitle = todoTitle;
         modalRef.content.saveClick.subscribe(() => {
             this.refreshTodosList();
         });
