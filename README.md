@@ -49,7 +49,7 @@ Here is the list of tasks available out of the box and run these via `npm run <t
  ```
    clean             Clean distribution folder
    build             Perform webpack build and generates bundle
-   start             Run development application on watch mode
+   watch             Run development application on watch mode
  ```
 
 ## :sparkles: Deployment
