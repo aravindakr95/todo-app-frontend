@@ -7,7 +7,7 @@ import { User } from '@/models';
 
 @Injectable({ providedIn: 'root' })
 export class AuthenticationService {
-    private static url = 'http://localhost:3000/v1/api/auth';
+    private static url = '/v1/api/auth';
 
     private currentUserSubject: BehaviorSubject<User>;
     public currentUser: Observable<User>;

@@ -7,7 +7,7 @@ import { TodoStatus } from '@/enums';
 
 @Injectable({ providedIn: 'root' })
 export class TodoService {
-    private static todo_url = 'http://localhost:3000/v1/api/todos';
+    private static todo_url = '/v1/api/todos';
 
     constructor(private http: HttpClient) {}
 
