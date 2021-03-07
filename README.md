@@ -26,7 +26,7 @@ Proceed with next steps if your platform meet following prerequisites.
 - Install [Node.js](https://nodejs.org/en/) (14x LTS) on your device.
 
 ## :sparkles: Getting Started
-* Run the following command under `todo-app-frontend` directory to install dependencies.
+Run the following command under `todo-app-frontend` directory to install dependencies.
  ```
  npm install
  ```
@@ -52,7 +52,7 @@ Here is the list of tasks available out of the box and run these via `npm run <t
  ```
 
 ## :sparkles: Deployment
-* Run the following command on browsers to direct access to application resources.
+Run the following command on browsers to direct access to application resources.
  ```
  https://prod-todo-fe.brilliant-apps.club
  ```
