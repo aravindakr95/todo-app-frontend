@@ -5,12 +5,13 @@
    <!-- START doctoc generated TOC please keep comment here to allow auto update -->
    <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
-- [System Diagram](#system-diagram)
-- [Usage](#usage)
-- [Getting started](#getting-started)
-- [Technologies](#technologies)
-- [How to use](#how-to-use)
-- [License](#license)
+- [System Diagram](#sparkles-system-diagram)
+- [Usage](#sparkles-usage)
+- [Getting started](#sparkles-getting-started)
+- [Technologies](#sparkles-technologies)
+- [How to use](#sparkles-how-to-use)
+- [Deployment](#sparkles-deployment)  
+- [License](#sparkles-license)
 
    <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -22,10 +23,10 @@
 
 Proceed with next steps if your platform meet following prerequisites.
 
-- Install [Node.js](https://nodejs.org/en/) (14+ LTS) on your device.
+- Install [Node.js](https://nodejs.org/en/) (14x LTS) on your device.
 
 ## :sparkles: Getting Started
-* Run the following commands under `todo-app-frontend` directory to install dependencies.
+* Run the following command under `todo-app-frontend` directory to install dependencies.
  ```
  npm install
  ```
@@ -39,7 +40,7 @@ Framework     	| Angular
 Stream Communication | RxJS
 Authentication | JWT
 Bundler           	| Webpack
-Code Quality Tools         	| ES Lint
+Code Quality Tools         	| TS Lint
 Dependency Registries      	| NPM
 
 ## :sparkles: How to Use
@@ -48,6 +49,12 @@ Here is the list of tasks available out of the box and run these via `npm run <t
  ```
    build             Perform webpack build and generates bundle
    start             Run the build task and mount index file
+ ```
+
+## :sparkles: Deployment
+* Run the following command on browsers to direct access to application resources.
+ ```
+ https://prod-todo-fe.brilliant-apps.club
  ```
 
 ## :sparkles: License
