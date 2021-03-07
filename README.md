@@ -52,9 +52,9 @@ Here is the list of tasks available out of the box and run these via `npm run <t
  ```
 
 ## :sparkles: Deployment
-Run the following command on browsers to direct access to application resources.
+Run the following command on browsers with HTTPS to direct access to application resources.
  ```
- https://prod-todo-fe.brilliant-apps.club
+ https://prod-todo.brilliant-apps.club
  ```
 
 ## :sparkles: License
