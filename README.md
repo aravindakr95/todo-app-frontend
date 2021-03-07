@@ -6,11 +6,11 @@
    <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
 - [System Diagram](#sparkles-system-diagram)
-- [Usage](#sparkles-usage)
+- [Prerequisites](#sparkles-prerequisites)
 - [Getting started](#sparkles-getting-started)
-- [Technologies](#sparkles-technologies)
 - [How to use](#sparkles-how-to-use)
-- [Deployment](#sparkles-deployment)  
+- [Deployment](#sparkles-deployment)
+- [Technologies](#sparkles-technologies)
 - [License](#sparkles-license)
 
    <!-- END doctoc generated TOC please keep comment here to allow auto update -->
@@ -19,7 +19,7 @@
 
 ![rendering_architecture.png](./user-guides/images/system-diagram.png)
 
-## :sparkles: Usage
+## :sparkles: Prerequisites
 
 Proceed with next steps if your platform meet following prerequisites.
 
@@ -45,7 +45,7 @@ Dependency Registries      	| NPM
 
 ## :sparkles: How to Use
 
-Here is the list of tasks available out of the box and run these via `npm run <task>`
+Here is the list of tasks available out of the box and run these via `npm run <task>`.
  ```
    build             Perform webpack build and generates bundle
    start             Run the build task and mount index file
