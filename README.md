@@ -21,27 +21,15 @@
 
 ## :sparkles: Prerequisites
 
-Proceed with next steps if your platform meet following prerequisites.
+Proceed with next steps if your platform meet following recommended prerequisite.
 
-- Install [Node.js](https://nodejs.org/en/) (14x LTS) on your device.
+- Install [Node.js](https://nodejs.org/en/) (14 LTS) on your device.
 
 ## :sparkles: Getting Started
 Run the following command under `todo-app-frontend` directory to install dependencies.
  ```
  npm install
  ```
-
-## :sparkles: Technologies
-
-Usage          	            | Technology
- --------------------------	| --------------------------
-Language        | TypeScript
-Framework     	| Angular
-Stream Communication | RxJS
-Authentication | JWT
-Bundler           	| Webpack
-Code Quality Tools         	| TS Lint
-Dependency Registries      	| NPM
 
 ## :sparkles: How to Use
 
@@ -57,6 +45,19 @@ Run the following command on browsers with HTTPS to direct access to application
  ```
  https://prod-todo.brilliant-apps.club
  ```
+
+## :sparkles: Technologies
+
+Usage          	            | Technology
+ --------------------------	| --------------------------
+Language                    | TypeScript
+Framework     	            | Angular
+Stream Communication        | RxJS
+UI Frameworks               | Bootstrap, NGX Bootstrap
+Authentication              | JWT
+Bundler           	        | Webpack
+Code Quality Tools         	| TS Lint
+Dependency Registries      	| NPM
 
 ## :sparkles: License
 
