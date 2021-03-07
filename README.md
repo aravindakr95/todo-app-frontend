@@ -47,8 +47,9 @@ Dependency Registries      	| NPM
 
 Here is the list of tasks available out of the box and run these via `npm run <task>`.
  ```
+   clean             Clean distribution folder
    build             Perform webpack build and generates bundle
-   start             Run the build task and mount index file
+   watch             Run development application on watch mode
  ```
 
 ## :sparkles: Deployment
