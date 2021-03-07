@@ -5,9 +5,11 @@ import { map } from 'rxjs/operators';
 
 import { User } from '@/models';
 
+import { environment } from '@/environments/environment';
+
 @Injectable({ providedIn: 'root' })
 export class AuthenticationService {
-    private static url = '/v1/api/auth';
+    private static url = `${environment.apiUrl}/v1/api/auth`;
 
     private currentUserSubject: BehaviorSubject<User>;
     public currentUser: Observable<User>;

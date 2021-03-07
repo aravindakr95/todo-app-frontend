@@ -3,11 +3,14 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
 import { Todo } from '@/models';
+
 import { TodoStatus } from '@/enums';
+
+import { environment } from '@/environments/environment';
 
 @Injectable({ providedIn: 'root' })
 export class TodoService {
-    private static todo_url = '/v1/api/todos';
+    private static todo_url = `${environment.apiUrl}/v1/api/todos`;
 
     constructor(private http: HttpClient) {}
 
